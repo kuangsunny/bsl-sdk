@@ -13,6 +13,7 @@ public class BSLModule {
 
 	private String identifier;
 	private String name;
+	private String packagename;
 	
 	public String getIdentifier() {
 		return identifier;
@@ -30,6 +31,14 @@ public class BSLModule {
 		this.name = name;
 	}
 
+	public String getPackagename() {
+		return packagename;
+	}
+
+	public void setPackagename(String packagename) {
+		this.packagename = packagename;
+	}
+	
 	public Fragment getFragment(){
 		return null;
 	}
@@ -54,5 +63,5 @@ public class BSLModule {
 	public void onTerminate() {
 		
 	}
-	
+
 }
