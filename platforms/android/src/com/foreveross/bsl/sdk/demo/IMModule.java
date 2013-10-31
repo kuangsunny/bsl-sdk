@@ -1,4 +1,4 @@
-package com.foreveross.bsl.model;
+package com.foreveross.bsl.sdk.demo;
 
 import com.foreveross.bsl.sdk.R;
 

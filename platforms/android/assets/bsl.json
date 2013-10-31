@@ -1,9 +1,9 @@
 {
     "version" : 1.0,
     "modules" : [
-    {"identifier":"com.foreveross.bsl.im", "name": "IMModule", "packagename": "com.foreveross.bsl.model"},
-    {"identifier":"mocha.location", "name": "LocationModule" , "packagename": "com.foreveross.bsl.model"},
-    {"identifier":"mocha.share", "name": "ShareModule" , "packagename": "com.foreveross.bsl.model"},
-    {"identifier":"mocha.debug", "name": "RemoteDebugerModule" , "packagename": "com.foreveross.bsl.model"}
+    {"identifier":"com.foreveross.bsl.im", "name": "IMModule", "package": "com.foreveross.bsl.sdk.demo"},
+    {"identifier":"mocha.location", "name": "LocationModule" , "package": "com.foreveross.bsl.sdk.demo"},
+    {"identifier":"mocha.share", "name": "ShareModule" , "package": "com.foreveross.bsl.sdk.demo"},
+    {"identifier":"mocha.debug", "name": "RemoteDebugerModule" , "package": "com.foreveross.bsl.sdk.demo"}
     ]
 }

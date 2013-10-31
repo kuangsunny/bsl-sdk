@@ -72,14 +72,14 @@ public class bslsdk extends CordovaActivity {
 		for (BSLModule module : modules) {
 			Class<?> clazz = null;
 			try {
-				clazz = Class.forName(module.getPackagename() + "."
+				clazz = Class.forName(module.getPackage() + "."
 						+ module.getName());
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if (clazz != null) {
-				data.add(module.getPackagename() + "." + module.getName());
+				data.add(module.getPackage() + "." + module.getName());
 				addmodules.add(module);
 			}
 		}
@@ -105,7 +105,7 @@ public class bslsdk extends CordovaActivity {
 	}
 
 	/**
-	 * ´Óassets ÎÄ¼þ¼ÐÖÐ»ñÈ¡ÎÄ¼þ²¢¶ÁÈ¡Êý¾Ý
+	 * ï¿½ï¿½assets ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ð»ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½
 	 * 
 	 * @param fileName
 	 * @return
@@ -114,11 +114,11 @@ public class bslsdk extends CordovaActivity {
 		String result = "";
 		try {
 			InputStream in = this.getResources().getAssets().open(fileName);
-			// »ñÈ¡ÎÄ¼þµÄ×Ö½ÚÊý
+			// ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½
 			int lenght = in.available();
-			// ´´½¨byteÊý×é
+			// ï¿½ï¿½ï¿½ï¿½byteï¿½ï¿½ï¿½ï¿½
 			byte[] buffer = new byte[lenght];
-			// ½«ÎÄ¼þÖÐµÄÊý¾Ý¶Áµ½byteÊý×éÖÐ
+			// ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½byteï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			in.read(buffer);
 			result = EncodingUtils.getString(buffer, "ENCODING");
 		} catch (Exception e) {
@@ -128,7 +128,7 @@ public class bslsdk extends CordovaActivity {
 	}
 
 	private ArrayList<BSLModule> buildBSLModule() {
-		// ¶ÁÈ¡JSON£¬²¢½øÐÐ·´Éä
+		// ï¿½ï¿½È¡JSONï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½
 		String result = getFromAssets("bsl.json").trim();
 		ArrayList<BSLModule> modules = null;
 		try {
@@ -140,10 +140,10 @@ public class bslsdk extends CordovaActivity {
 				JSONObject jb = (JSONObject) jay.get(i);
 				String identifier = (String) jb.get("identifier");
 				String name = (String) jb.get("name");
-				String packagename = (String) jb.get("packagename");
+				String packagename = (String) jb.get("package");
 				module.setIdentifier(identifier);
 				module.setName(name);
-				module.setPackagename(packagename);
+				module.setPackage(packagename);
 				modules.add(module);
 			}
 		} catch (Exception e) {

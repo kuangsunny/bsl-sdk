@@ -33,10 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.foreveross.bsl.model.IMModule" />
-        <activity android:name="com.foreveross.bsl.model.LocationModule" />
-        <activity android:name="com.foreveross.bsl.model.ShareModule" />
-        <activity android:name="com.foreveross.bsl.model.RemoteDebugerModule" />
+        <activity android:name="com.foreveross.bsl.sdk.demo.IMModule" />
+        <activity android:name="com.foreveross.bsl.sdk.demo.LocationModule" />
+        <activity android:name="com.foreveross.bsl.sdk.demo.ShareModule" />
+        <activity android:name="com.foreveross.bsl.sdk.demo.RemoteDebugerModule" />
     </application>
 
     <uses-sdk

@@ -1,7 +1,5 @@
 package com.foreveross.bsl;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.res.Configuration;
 
 /**
@@ -13,7 +11,7 @@ public class BSLModule {
 
 	private String identifier;
 	private String name;
-	private String packagename;
+	private String packageName;
 	
 	public String getIdentifier() {
 		return identifier;
@@ -31,20 +29,12 @@ public class BSLModule {
 		this.name = name;
 	}
 
-	public String getPackagename() {
-		return packagename;
+	public String getPackage() {
+		return packageName;
 	}
 
-	public void setPackagename(String packagename) {
-		this.packagename = packagename;
-	}
-	
-	public Fragment getFragment(){
-		return null;
-	}
-	
-	public Activity getActivity(){
-		return null;
+	public void setPackage(String packageName) {
+		this.packageName = packageName;
 	}
 	
 	//life cycle
