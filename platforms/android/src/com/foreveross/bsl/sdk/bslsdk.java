@@ -28,6 +28,8 @@ import org.apache.http.util.EncodingUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.foreveross.bsl.BSLModule;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -36,13 +38,19 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.foreveross.bsl.model.Modules;
 
 public class bslsdk extends CordovaActivity {
 	ListView listview;
 	List<String> data = new ArrayList<String>();
-	ArrayList<Modules> addmodules = new ArrayList<Modules>();
+	ArrayList<BSLModule> addmodules = new ArrayList<BSLModule>();
 
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+	}
+	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,7 +60,7 @@ public class bslsdk extends CordovaActivity {
 		// super.loadUrl("file:///android_asset/www/index.html")
 
 		setContentView(R.layout.activity_main);
-		ArrayList<Modules> modules = buildBSLModule();
+		ArrayList<BSLModule> modules = buildBSLModule();
 		listview = (ListView) findViewById(R.id.listView1);
 //		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 //				android.R.layout.simple_list_item_1, data);
@@ -61,7 +69,7 @@ public class bslsdk extends CordovaActivity {
 
 
 		
-		for (Modules module : modules) {
+		for (BSLModule module : modules) {
 			Class<?> clazz = null;
 			try {
 				clazz = Class.forName(module.getPackagename() + "."
@@ -119,16 +127,16 @@ public class bslsdk extends CordovaActivity {
 		return result;
 	}
 
-	private ArrayList<Modules> buildBSLModule() {
+	private ArrayList<BSLModule> buildBSLModule() {
 		// 读取JSON，并进行反射
 		String result = getFromAssets("bsl.json").trim();
-		ArrayList<Modules> modules = null;
+		ArrayList<BSLModule> modules = null;
 		try {
 			JSONObject json = new JSONObject(result);
 			JSONArray jay = json.getJSONArray("modules");
-			modules = new ArrayList<Modules>();
+			modules = new ArrayList<BSLModule>();
 			for (int i = 0; i < jay.length(); i++) {
-				Modules module = new Modules();
+				BSLModule module = new BSLModule();
 				JSONObject jb = (JSONObject) jay.get(i);
 				String identifier = (String) jb.get("identifier");
 				String name = (String) jb.get("name");
