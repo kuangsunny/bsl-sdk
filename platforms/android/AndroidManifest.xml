@@ -1,14 +1,50 @@
 <?xml version='1.0' encoding='utf-8'?>
-<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="1.0.0" android:windowSoftInputMode="adjustPan" package="com.foreveross.bsl.sdk" xmlns:android="http://schemas.android.com/apk/res/android">
-    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.foreveross.bsl.sdk"
+    android:hardwareAccelerated="true"
+    android:versionCode="1"
+    android:versionName="1.0.0"
+    android:windowSoftInputMode="adjustPan" >
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <application android:name="com.foreveross.bsl.BSLApplication" android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/app_name" android:name="bslsdk" android:theme="@android:style/Theme.Black.NoTitleBar">
+
+    <application
+        android:name="com.foreveross.bsl.BSLApplication"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="bslsdk"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.foreveross.bsl.model.IMModule" >
+        </activity>
+        <activity android:name="com.foreveross.bsl.model.LocationModule" >
+        </activity>
+        <activity android:name="com.foreveross.bsl.model.ShareModule" >
+        </activity>
+        <activity android:name="com.foreveross.bsl.model.RemoteDebugerModule" >
+        </activity>
     </application>
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
 </manifest>

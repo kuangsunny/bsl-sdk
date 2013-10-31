@@ -19,6 +19,7 @@ public class BSLApplication extends android.app.Application{
 	@Override
 	public void onCreate() {
 		super.onCreate();
+
 		for(BSLModule m : modules.values()){
 			m.onCreate();
 		}
