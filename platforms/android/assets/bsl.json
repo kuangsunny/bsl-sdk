@@ -4,6 +4,7 @@
     {"identifier":"com.foreveross.bsl.im", "name": "IMModule", "package": "com.foreveross.bsl.sdk.demo"},
     {"identifier":"mocha.location", "name": "LocationModule" , "package": "com.foreveross.bsl.sdk.demo"},
     {"identifier":"mocha.share", "name": "ShareModule" , "package": "com.foreveross.bsl.sdk.demo"},
-    {"identifier":"mocha.debug", "name": "RemoteDebugerModule" , "package": "com.foreveross.bsl.sdk.demo"}
+    {"identifier":"mocha.debug", "name": "RemoteDebugerModule" , "package": "com.foreveross.bsl.sdk.demo"},
+    {"identifier":"test2.eking", "name": "MainActivity" , "package": "com.example.test2"}
     ]
 }

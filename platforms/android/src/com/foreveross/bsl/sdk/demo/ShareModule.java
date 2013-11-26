@@ -11,6 +11,6 @@ public class ShareModule extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.sharemodule);
+		setContentView(R.layout.bsl_sharemodule);
 	}
 }

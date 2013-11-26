@@ -11,6 +11,6 @@ public class RemoteDebugerModule extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.remotedebugermodule);
+		setContentView(R.layout.bsl_remotedebugermodule);
 	}
 }

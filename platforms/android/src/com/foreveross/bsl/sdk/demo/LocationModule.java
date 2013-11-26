@@ -11,6 +11,6 @@ public class LocationModule extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.locationmodule);
+		setContentView(R.layout.bsl_locationmodule);
 	}
 }
